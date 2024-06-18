@@ -1,0 +1,20 @@
+141. Linked List Cycle
+
+Knowledge Used:
+Slow and Fast Pointer
+Floyd’s Cycle Finding Algorithm
+
+Pointers Behavior:
+First pointer moves one cell at a time, fast pointer moves two cells at a time, both pointers eventually intersect in the loop
+
+I wasn’t able to solve this problem on my own; however, I feel I came close to the solution. My first approach involved two pointers:
+Slow pointer:
+Iterated in outer loop, pointed to each cell in the list at a time until reaching the end
+Fast pointer:
+Iterated in inner loop, pointed to each cell after slow cell until either reaching slow cell again (indicated loop), or reaching end (no loop)
+
+The obvious problem with this solution is that, if the slow-pointed cell comes before a loop, then the fast pointer will become trapped in the list loop because it will never reach the slow-pointed cell or the end. Basically, you become trapped in the very loop you’re searching for. 
+
+My idea for the second solution, then, was to move both pointers along relatively close to each other and see if any shenanigans happened. I feel this is close to the actual solution because the solution requires the slow pointer to move one cell at a time, and the fast pointer to move two cells at a time. This actually causes both pointers to eventually meet. I’m not mad at myself for not coming up with this solution because I feel even if I did, I still wouldn’t have been sure the two pointers would meet up.
+
+https://www.educative.io/answers/why-does-floyds-cycle-detection-algorithm-work

@@ -1,0 +1,18 @@
+19. Remove Nth Node From End of List
+
+Knowledge Used: 
+Slow and Fast Pointer
+Linked List + Associated Edge Cases
+
+Pointers Behavior:
+Slow pointer trails behind fast pointer by n+1 cells, stops when the fast pointer points to the last cell, and removes the cell after it when the stop occurs.
+
+I was able to solve this problem on my own, but it involved two approaches; the first approach failed. The first approach involved initially setting both pointers to head. It worked until the head had to be removed. In that case, the cell after head would be removed because slow would still be pointing to head. So, for my second approach, I set slow to initially point to null. This worked because it was clear that slow hadn’t been updated by the end if it was still null, and therefore the head was to be removed. However, the coded logic got too convoluted for me
+
+I then used the dummy approach on my second submission. I kinda stole this idea from the solutions tab, but all I read at first were the words dummy node; I filled in the rest of the logic myself. Essentially, this approach involves setting the slow pointer to a dummy variable whose next points to head. Then, if slow isn’t iterated by the end of the program, head will come after it and will therefore be removed. Essentially, my first approach prohibited the head from being removed because it was impossible to get in front of it.
+
+As for how the head’s position was maintained and returned in my second approach, the dummy variable actually maintained a reference to head by the program’s termination in all cases. This is because, if slow points to dummy post loop, dummy’s next is simply set to the cell after the head, which becomes the new head now that the old head has been removed.
+
+TLDR
+Problems arose involving the edge case of removing the head of the linked list
+A dummy cell was introduced to solve this problem as well as simplify the coded logic
