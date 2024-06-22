@@ -1,0 +1,12 @@
+161. Two Sum II - Input Array Is Sorted
+
+Knowledge Used: 
+Slow and Fast Pointer
+Pointers At Both Ends
+
+Pointers Behavior:
+Left pointer moves right when sum of both pointers is less than target, and right pointer moves left when sum of both pointers is greater than target; this ensures that the sum is decreased when it becomes larger than the target, and vice versa.
+
+I was able to solve this problem on my own; however, my solution was lacking. My solution involved simply checking every value to the left of the right pointer and seeing if they both summed up to target. I figured I could optimize it by ignoring values greater than target on the right, but this didn’t work because a sum could have a # greater than the target + a negative number.
+
+I was able to glean the 2nd solution from a submission I examined. In that submission, the behavior described in the “pointers behavior” note above was present. This solution required far less iterations of the pointers whilst implementing the optimization I described in a way more intelligent manner. 
