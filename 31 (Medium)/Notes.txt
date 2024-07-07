@@ -1,0 +1,33 @@
+31. Next Permutation
+
+Knowledge Used:
+In-Place Sorting
+Permutations
+Ascending/Descending Sort
+Lexicographical Weight
+
+Performance:
+Runtime: Beats 86.87% of submissions @ 94 milliseconds
+Memory: Beats 7.14% of submissions @ 46.84 megabytes
+
+Pointers Behavior:
+Program initially uses one outer and one nested for-loop to determine a swap that incurs the lowest possible lexicographical increase to the given integer array
+The outer loop starts one spot away from the end of the integer array, and shifts one spot closer to the beginning, or left, of the array on each iteration; this index is used to determine the left value to be swapped. 
+The inner loop starts at the end of the array, and moves to intercept the index of the outer loop.
+A swap occurs if the value at the left index is less than the value at the right index; this conditional indicates that the smallest possible disruption in the descending order of the array has been found. 
+Therefore, correcting this disorder is the smallest possible initial increase in lexicographical value.
+I say initial, because the values to the right of the left-most bound must then be sorted in ascending order, which further decreases the lexicographical difference between the starting array, and what is returned.
+
+I was able to solve this problem completely on my own; however, it took a very long time. I tried to follow the problem solving steps listed at the top of this doc, which helped a lot. I think I would’ve been able to find a solution sooner had I spent more time thinking through what the question was actually asking me. In the future, I feel like I should be able to rephrase what the question is asking in simple terms before ever writing a line of code. 
+
+As for how I would explain the problem now that I’m done, I’d say this:
+
+The goal of the program is to find the next permutation of the given integer array. First of all, what is the “next” permutation? Seeing as a permutation of a sequence is simply a re-ordering of that sequence, then the “next” permutation of a sequence is a lexicographically greater ordering of that sequence; more specifically, it is the next-greatest lexicographical ordering of that sequence. Therefore, the goal of the program is to increase the lexicographical value of the given sequence by the smallest amount possible through reordering it. 
+
+First off, how does one increase the lexicographical value of a sequence?
+
+To start, it's worth noting that the permutation of a sequence with the lowest possible lexicographical value is the permutation where that sequence is sorted in ascending order. On the other end of the spectrum, the permutation of a sequence with the highest possible lexicographical value is the permutation where that sequence is sorted in descending order. Therefore, to increase the lexicographical value of a sequence, one must reorder the sequence in a way that it moves from an ascending to a descending structure. 
+
+The smallest possible way to enact this change is through a swap; two values in the array must be swapped in a manner that moves a greater value closer to the front of the array, and a smaller value closer to the back of the array.
+
+The program gets tricky when it comes to locating the values to swap; also, problems arise because, despite the swap being the smallest initial way to increase the lexicographical value, the increase the swap incurs can actually be decreased by arranging the variables after the left index involved in the swap in ascending order; afterall, ascending order of a sequence represents the smallest possible lexicographical ordering of that sequence.
