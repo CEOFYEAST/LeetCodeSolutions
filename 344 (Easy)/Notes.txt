@@ -1,0 +1,15 @@
+344. Reverse String
+
+Knowledge Used:
+In-Place Sorting
+Two Pointers
+Pointers Running From Both Ends Of Array
+
+Performance:
+Runtime: Beats 97.61% of submissions @ 203 milliseconds
+Memory: Beats 54.97% of submissions @ 129.26 megabytes
+
+Pointers Behavior:
+A for loop that runs through half of the array maintains the left pointer, and the right pointer’s position is calculated on each loop 
+
+I was able to complete this problem on my own really easily, and my solution is super efficient. I think going through the same problem solving process I use on other problems gave me a leg up here because other people would consider the problem too easy to put much thought into it. However, I was able to boil the problem down to a few super simple steps using logic. 
