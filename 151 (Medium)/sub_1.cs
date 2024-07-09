@@ -7,7 +7,8 @@ public class Solution
     {
         int sIndex = 0;
         int l = s.Length;
-        Stack<string> words = new();
+        string toReturn = "";
+        //Stack<string> words = new();
         while (sIndex != s.Length)
         {
             // enter word search mode
@@ -16,30 +17,17 @@ public class Solution
                 sIndex++;
             }
 
+            if(sIndex == l) { break; }
+
             // enter word processing mode
-            string toPush = "";
+            string toInsert = "";
             while (sIndex != l && s[sIndex] != ' ')
             {
                 toPush += s[sIndex];
                 sIndex++;
             }
 
-            if (toPush != "")
-            {
-                words.Push(toPush);
-            }
-        }
-
-        // enter return mode
-        string toReturn = "";
-        while (words.Count != 0)
-        {
-            toReturn += words.Pop();
-
-            if (words.Count != 0)
-            {
-                toReturn += ' ';
-            }
+            toReturn.Insert(0, toInsert);
         }
 
         return toReturn;
