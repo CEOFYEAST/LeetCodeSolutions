@@ -1,0 +1,15 @@
+151. Reverse Words in a String
+
+Knowledge Used:
+Stack
+Split
+Trim
+
+Performance:
+Runtime: Beats 68.41% of submissions @ 57 milliseconds
+Memory: Beats 15% of submissions @ 62 megabytes
+
+Pointers Behavior:
+One pointer was used to access each character in the supplied string; this pointer was pushed forward via a for loop.
+
+I was able to solve this problem on my own; however, it became difficult for me because I got pretty caught up in the logic of it. My original submission worked, but it was super inefficient and had two while loops nested inside another while loop. I think taking a break from the problem could’ve helped me see that a lot of the stuff I used was pretty unnecessary. Also, I still need to get better at optimizing memory.
