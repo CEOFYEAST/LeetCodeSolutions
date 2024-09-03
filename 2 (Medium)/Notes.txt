@@ -1,0 +1,16 @@
+2. Add Two Numbers
+
+Knowledge Used:
+Dummy head
+Linked list reading and writing
+Addition / Remainder Carrying
+
+Performance:
+Runtime: Beats 38% of submissions @ 81 milliseconds
+Memory: Beats 90.35% of submissions @ 51.16 megabytes
+
+I really enjoyed this problem; I think it was a good benchmark for where I'm at right now LeetCode-wise. I was able to come up with the correct approach by carefully analyzing the input, expected output, requirements, definitions, edge cases, and example input/output provided by the author. The examples allowed me to follow the program as if I was the algorithm, a strategy that ultimately led to a better-than-brute force approach; keeping in mind all the info mentioned before helped immensely as well. 
+
+However, as a benchmark, the problem also highlighted my weak points. While my algorithm was generally correct, I forgot to account for end-of-loop & post-loop behavior. I feel like said behavior always comes back to bite me. Also, since I wasn’t completely sure when to use a dummy head for a linked list and when not to, I added some unnecessary code. Now, though, I know to use a dummy head only if I’m writing to the head, or there are uncertainties surrounding it; when doing the problem I used dummy heads when solely reading linked lists. 
+
+In conclusion, I need to continue doing problems and attempting to weed out my weak areas; some more variety in problem sets would also be nice.
